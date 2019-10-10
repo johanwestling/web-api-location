@@ -27,12 +27,15 @@ document.getElementById('location-update').addEventListener('click', function(ev
 
   getLocation()
     .then(response => {
-
       output.innerHTML = `<strong>Your location is:</strong><br>\n`;
-
       for(var key in response){
         output.innerHTML += `${key}: ${response[key]}<br>\n`;
       }
     })
-    .catch(error => output.innerText = error);
+    .catch(response => {
+      output.innerHTML = `<strong>Something went wrong:</strong><br>\n`;
+      for(var key in response){
+        output.innerHTML += `${key}: ${response[key]}<br>\n`;
+      }
+    });
 });
