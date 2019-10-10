@@ -34,5 +34,5 @@ document.getElementById('location-update').addEventListener('click', function(ev
         output.innerHTML += `${key}: ${response[key]}<br>\n`;
       }
     })
-    .catch(error => console.error(error));
+    .catch(error => output.innerText = error);
 });
