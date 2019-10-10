@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mailbox PWA</title>
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+  <style>
+  html {
+    box-sizing: border-box;
+    font-size: 100%;
+  }
+
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+
+  body, button, input, select, textarea, pre {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1em;
+    line-height: 1.5;
+    color: black;
+  }
+
+  body {
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-rows: 1fr 3em;
+  }
+
+  pre {
+    background: black;
+    padding: 2em;
+    margin: 0;
+    overflow: auto;
+    overflow-x: hidden;
+
+    color: green;
+  }
+
+  button {
+    background: green;
+    border: none;
+
+    font-weight: bold;
+    color: black;
+  }
+  </style>
+</head>
+<body>
+  <pre id="location-output">Click button below to load your position</pre>
+  <button id="location-update">Update location data</button>
+  <script src="~/app.js"></script>
+</body>
+</html>

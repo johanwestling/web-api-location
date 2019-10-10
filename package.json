@@ -1,0 +1,23 @@
+{
+  "name": "mailbox",
+  "version": "1.0.0",
+  "description": "Mailbox PWA",
+  "author": "Johan Westling",
+  "license": "ISC",
+  "homepage": "https://github.com/johanwestling/mailbox#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johanwestling/mailbox.git"
+  },
+  "bugs": {
+    "url": "https://github.com/johanwestling/mailbox/issues"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel serve src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "dependencies": {
+    "parcel": "^1.12.4"
+  }
+}
