@@ -28,10 +28,10 @@ document.getElementById('location-update').addEventListener('click', function(ev
   getLocation()
     .then(response => {
 
-      output.innerText = `Your location is:\n`;
+      output.innerHTML = `<strong>Your location is:</strong><br>\n`;
 
       for(var key in response){
-        output.innerText += `${key}: ${response[key]}\n`;
+        output.innerHTML += `${key}: ${response[key]}<br>\n`;
       }
     })
     .catch(error => console.error(error));

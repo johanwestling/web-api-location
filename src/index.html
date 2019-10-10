@@ -29,20 +29,30 @@
     overflow: hidden;
 
     display: grid;
+    grid-template-columns: 100%;
     grid-template-rows: 1fr 3em;
   }
 
-  pre {
+  #location-output {
     background: black;
     padding: 2em;
     margin: 0;
     overflow: auto;
     overflow-x: hidden;
 
+    white-space: wrap;
     color: green;
   }
 
-  button {
+  #location-output strong {
+    padding-bottom: .2em;
+    border-bottom: 1px solid green;
+    margin: 0 0 .5em;
+
+    display: inline-block;
+  }
+
+  #location-update {
     background: green;
     border: none;
 
@@ -52,7 +62,7 @@
   </style>
 </head>
 <body>
-  <pre id="location-output">Click button below to load your position</pre>
+  <div id="location-output">Click button below to load your position</div>
   <button id="location-update">Update location data</button>
   <script src="~/app.js"></script>
 </body>
